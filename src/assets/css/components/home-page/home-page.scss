@@ -1,0 +1,33 @@
+.home-page
+{
+    text-align: center;
+    padding-top: 160px;
+
+    h1
+    {
+        font-size:calc(40px + 1.5vw);
+    }
+    .home-page__subheader
+    {
+        color: #999999; 
+        font-size:calc(15px + 0.5vw);
+        padding-top: 10px;
+        padding-bottom:20px;
+    }
+
+    .home-page__social-links a {
+        color: #979797;
+        font-size:calc(15px + 0.3vw);
+        margin-right: 20px;
+        line-height: 20px;
+    }
+
+    .home-page__social-links a:last-child {
+        margin-right: 0;
+    }
+
+    .home-page__social-links a:hover {
+        color: #d15445;
+        font-size: 20px;
+    }
+}

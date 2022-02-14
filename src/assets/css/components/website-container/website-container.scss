@@ -1,0 +1,9 @@
+.website-container
+{
+    padding: 20px 20px;
+    
+    @media(min-width:576px)
+    {
+        padding: 20px 18%;
+    }
+}
