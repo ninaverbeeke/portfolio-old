@@ -1,4 +1,4 @@
-# nina-portfolio
+# Portfolio Nina Verbeeke
 
 ## Project setup
 ```
