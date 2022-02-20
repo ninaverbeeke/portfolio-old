@@ -82,10 +82,10 @@ import Hermes from "./portfolio_items/Hermes.vue"
 import MinimaxGame from "./portfolio_items/MinimaxGame.vue"
 import MoleculesGame from "./portfolio_items/MoleculesGame.vue"
 import VirtualReality from "./portfolio_items/VirtualReality.vue"
-import Exoot from "./portfolio_items/ExootProject.vue"
+import ExootProject from "./portfolio_items/ExootProject.vue"
 
 @Component({
-  components: { BIcon, BIconInstagram, PortfolioItem, Exoot, AlarmClockMat, GraduationAssignment, Hermes, MinimaxGame, MoleculesGame, VirtualReality},
+  components: { BIcon, BIconInstagram, PortfolioItem, ExootProject, AlarmClockMat, GraduationAssignment, Hermes, MinimaxGame, MoleculesGame, VirtualReality},
 })
 export default class Work extends Vue {
   current_page = "";

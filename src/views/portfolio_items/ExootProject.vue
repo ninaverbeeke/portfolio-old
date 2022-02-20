@@ -58,7 +58,8 @@ import { BIconArrowBarLeft } from "bootstrap-vue";
 @Component({
   components: { BIconArrowBarLeft },
 })
-export default class ExootProject extends Vue {  moveBackToPortfolio(){
+export default class ExootProject extends Vue {  
+  moveBackToPortfolio(){
     this.$emit('clicked', '')
   }}
 </script>
