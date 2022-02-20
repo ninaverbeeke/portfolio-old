@@ -57,13 +57,13 @@
   <hermes @clicked="goBackToOverview"> </hermes>
   </div>
   <div v-else-if="current_page==='/vr_application'"> 
-  <vr-app @clicked="goBackToOverview"> </vr-app>
+  <virtual-reality @clicked="goBackToOverview"> </virtual-reality>
   </div>
   <div v-else-if="current_page==='/molecules_game'"> 
   <molecules-game @clicked="goBackToOverview"> </molecules-game>
   </div>
   <div v-else-if="current_page==='/exoot'"> 
-  <exoot @clicked="goBackToOverview"> </exoot>
+  <exoot-project @clicked="goBackToOverview"> </exoot-project>
   </div>
   <div v-else-if="current_page==='/alarm_clock_mat'"> 
   <alarm-clock-mat @clicked="goBackToOverview"> </alarm-clock-mat>
@@ -77,15 +77,15 @@ import { Component } from "vue-property-decorator";
 import { BIcon, BIconInstagram } from "bootstrap-vue";
 import PortfolioItem from "../components/PortfolioItem.vue";
 import AlarmClockMat from "./portfolio_items/AlarmClockMat.vue"
-import EXOOT from "./portfolio_items/EXOOT.vue"
 import GraduationAssignment from "./portfolio_items/GraduationAssignment.vue"
 import Hermes from "./portfolio_items/Hermes.vue"
 import MinimaxGame from "./portfolio_items/MinimaxGame.vue"
 import MoleculesGame from "./portfolio_items/MoleculesGame.vue"
-import VRApp from "./portfolio_items/VRApp.vue"
+import VirtualReality from "./portfolio_items/VirtualReality.vue"
+import Exoot from "./portfolio_items/ExootProject.vue"
 
 @Component({
-  components: { BIcon, BIconInstagram, PortfolioItem, AlarmClockMat, EXOOT,GraduationAssignment, Hermes, MinimaxGame, MoleculesGame, VRApp},
+  components: { BIcon, BIconInstagram, PortfolioItem, Exoot, AlarmClockMat, GraduationAssignment, Hermes, MinimaxGame, MoleculesGame, VirtualReality},
 })
 export default class Work extends Vue {
   current_page = "";
@@ -163,8 +163,6 @@ export default class Work extends Vue {
   ];
 
   on_portfolio_click(page){
-    console.log('joejoe');
-    console.log(page);
     this.current_page = page;
   }
 
@@ -173,6 +171,14 @@ export default class Work extends Vue {
   }
 
   mounted() {
+    // get the element
+    const element = document.getElementById('work_nav')
+
+    // always checking if the element is clicked, if so, do alert('hello')
+    element.addEventListener("click", () => {
+      this.current_page="";
+    });
+
     const filterButtons = document.querySelector("#filter-btns").children;
     const items = document.querySelector(".portfolio-gallery").children;
     for (let i = 0; i < filterButtons.length; i++) {

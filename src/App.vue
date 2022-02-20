@@ -21,7 +21,7 @@
             <b-nav-item :to="{ path: '/about' }">
               <span> About </span>
             </b-nav-item>
-            <b-nav-item :to="{ path: '/work' }"> Work </b-nav-item>
+            <b-nav-item :to="{ path: '/work' }" id="work_nav"> Work </b-nav-item>
             <!-- <b-nav-item href="#"> Portfolio </b-nav-item>
           <b-nav-item href="#"> Contact </b-nav-item> -->
           </b-navbar-nav>

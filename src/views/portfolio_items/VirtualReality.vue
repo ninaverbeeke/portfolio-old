@@ -67,7 +67,7 @@ import { BIconArrowBarLeft } from "bootstrap-vue";
 @Component({
   components: { BIconArrowBarLeft },
 })
-export default class VRApp extends Vue {  moveBackToPortfolio(){
+export default class VirtualReality extends Vue {  moveBackToPortfolio(){
     this.$emit('clicked', '')
   }}
 </script>

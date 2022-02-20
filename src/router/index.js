@@ -28,43 +28,7 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/Work.vue"),
-  },
-  {
-    path: "/graduation_assignment",
-    name: "GraduationAssignment",
-    component: () =>
-      import("../views/portfolio_items/GraduationAssignment.vue"),
-  },
-  {
-    path: "/alarm_clock_mat",
-    name: "AlarmClockMat",
-    component: () => import("../views/portfolio_items/AlarmClockMat.vue"),
-  },
-  {
-    path: "/exoot",
-    name: "EXOOT",
-    component: () => import("../views/portfolio_items/EXOOT.vue"),
-  },
-  {
-    path: "/hermes",
-    name: "Hermes",
-    component: () => import("../views/portfolio_items/Hermes.vue"),
-  },
-  {
-    path: "/minimax_game",
-    name: "MinimaxGame",
-    component: () => import("../views/portfolio_items/MinimaxGame.vue"),
-  },
-  {
-    path: "/molecules_game",
-    name: "MoleculesGame",
-    component: () => import("../views/portfolio_items/MoleculesGame.vue"),
-  },
-  {
-    path: "/vr_application",
-    name: "VRApp",
-    component: () => import("../views/portfolio_items/VRApp.vue"),
-  },
+  }
 ];
 
 const router = new VueRouter({
