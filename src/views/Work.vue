@@ -17,11 +17,11 @@
     <div class="row portfolio__filters">
       <div class="portfolio__filters__buttons">
         <ul id="filter-btns">
-          <li class="active" data-target="all">All</li>
-          <li data-target="Programming">Programming</li>
-          <li data-target="Electronics">Electronics</li>
-          <li data-target="Data science">Data science</li>
-          <li data-target="UX Research">UX Research</li>
+          <li @click="clickCategory('all')" :class="{active : selected_category == 'all'}">All</li>
+          <li @click="clickCategory('Programming')" :class="{active : selected_category == 'Programming'}">Programming</li>
+          <li @click="clickCategory('Electronics')" :class="{active : selected_category == 'Electronics'}">Electronics</li>
+          <li @click="clickCategory('Data science')" :class="{active : selected_category == 'Data science'}">Data science</li>
+          <li @click="clickCategory('UX Research')" :class="{active : selected_category == 'UX Research'}">UX Research</li>
         </ul>
       </div>
       <hr />
@@ -39,6 +39,7 @@
             :category="item.category"
             :fileName="item.fileName"
             :page="item.page"
+            v-if="item.category.split(',').includes(selected_category)  || selected_category == 'all'"
             @click.native="on_portfolio_click(item['page'])"
           >
           </portfolio-item>
@@ -89,7 +90,7 @@ import ExootProject from "./portfolio_items/ExootProject.vue"
 })
 export default class Work extends Vue {
   current_page = "";
-  portfolio_labels = ["a", "b", "c"];
+  selected_category = "all";
 
   portfolio_items = [
     {
@@ -170,37 +171,8 @@ export default class Work extends Vue {
     this.current_page="";
   }
 
-  mounted() {
-    // get the element
-    const element = document.getElementById('work_nav')
-
-    // always checking if the element is clicked, if so, do alert('hello')
-    element.addEventListener("click", () => {
-      this.current_page="";
-    });
-
-    const filterButtons = document.querySelector("#filter-btns").children;
-    const items = document.querySelector(".portfolio-gallery").children;
-    for (let i = 0; i < filterButtons.length; i++) {
-      filterButtons[i].addEventListener("click", function () {
-        for (let j = 0; j < filterButtons.length; j++) {
-          filterButtons[j].classList.remove("active");
-        }
-        this.classList.add("active");
-        const target = this.getAttribute("data-target");
-
-        for (let k = 0; k < items.length; k++) {
-          const categories = items[k].getAttribute("data-id").split(",");
-          items[k].style.display = "none";
-          if (categories.includes(target)) {
-            items[k].style.display = "block";
-          }
-          if (target == "all") {
-            items[k].style.display = "block";
-          }
-        }
-      });
-    }
+  clickCategory(cat){
+    this.selected_category = cat;
   }
 }
 </script>
