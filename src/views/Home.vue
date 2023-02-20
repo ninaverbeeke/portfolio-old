@@ -12,8 +12,7 @@
       <b-row class="justify-content-md-center">
         <b-col cols="12">
           <p class="home-page__subheader">
-            Front-end developer at El Niño | Business intelligence <br />
-            developer at AEMICS
+            EIT Digital MSc student - Data Science @ TU/e
           </p>
         </b-col>
       </b-row>
