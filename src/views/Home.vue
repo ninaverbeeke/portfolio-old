@@ -5,7 +5,8 @@
         <b-col cols="12">
           <h1>
             Hi! I'm Nina Verbeeke.
-            <span class="portfolio__header__icon"> 👩🏽‍💻 </span>
+            <!-- <span class="portfolio__header__icon"> 👩🏽‍💻 </span> -->
+            <img src="@/assets/img/emoji/woman-technologist.png" width="5.8%" />
           </h1>
         </b-col>
       </b-row>

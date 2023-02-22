@@ -1,7 +1,7 @@
 <template>
 <div>
-  <div v-if="current_page.length === 0" class="container portfolio">
-    <div class="row portfolio__header">
+  <div v-if="current_page.length === 0" class="portfolio">
+    <div class="portfolio__header">
       <h1>
         Portfolio
         <span class="portfolio__header__icon"> 💡 </span>
@@ -27,7 +27,7 @@
       <hr />
     </div>
 
-    <div class="row">
+    <div class="row m-0">
       <div class="portfolio-gallery">
         <template v-for="item in portfolio_items">
           <!-- eslint-disable-next-line vue/require-v-for-key -->
